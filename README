@@ -1,4 +1,4 @@
-#Overview of Hashcat
+#Overview
 When a password is stored on a server, it is rarely kept in plain text. Instead, a hashing function transforms this password into a unique and irreversible fingerprint, called a hash. This secures passwords by replacing them with an unreadable fingerprint while still allowing the system to verify their validity without ever needing to know or display the original password.
 
 However, if an attacker obtains these fingerprints, they may try to retrieve the original passwords by testing thousands of combinations using powerful decryption tools. It is precisely this type of task that Hashcat facilitates in a legal and controlled context.
