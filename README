@@ -1,8 +1,63 @@
-# Overview of Hashcat
+#Overview of Hashcat
 When a password is stored on a server, it is rarely kept in plain text. Instead, a hashing function transforms this password into a unique and irreversible fingerprint, called a hash. This secures passwords by replacing them with an unreadable fingerprint while still allowing the system to verify their validity without ever needing to know or display the original password.
 
 However, if an attacker obtains these fingerprints, they may try to retrieve the original passwords by testing thousands of combinations using powerful decryption tools. It is precisely this type of task that Hashcat facilitates in a legal and controlled context.
 - Hashcat is a password recovery tool with the goal to test robustness of your systems during penetest preformed by a certifies ethical hacker
 - Designed to preform high-preformance brute-for or dictionary attacks. 
 - Helps identify weaknessess in passwords policies and enhance protection measures
-<img width="756" height="488" alt="Image" src="https://github.com/user-attachments/assets/cccd72cb-c4ba-4ae8-a65c-e58f2e1bf7b1" />
+
+### Technical Prerequisites
+
+**System Requirements:**
+
+* 64-bit operating system
+* Functional terminal or command prompt
+
+**GPU Requirements:**
+
+* Hashcat uses GPU for faster performance
+* **NVIDIA GPUs**: Install **CUDA drivers**
+* **AMD GPUs**: Install **OpenCL drivers**
+
+---
+
+### 💻 Install Hashcat on Windows
+
+* Go to the [official Hashcat website](https://hashcat.net/hashcat/)
+* Download the latest **Windows** version
+* Extract the archive using **WinRAR** or **7-Zip**
+* Open **Command Prompt**
+* Navigate to the extracted folder using `cd`
+* Run `hashcat.exe` to verify installation
+
+---
+
+### Install Hashcat on macOS
+
+* Download the **macOS** version from the official site
+* Use **Terminal** to:
+
+  * Extract the files
+  * Navigate into the installation folder
+* If you get a permission error:
+
+  * Go to **System Preferences > Security & Privacy**
+  * Allow execution
+* Run `./hashcat` from Terminal to start the program
+
+---
+
+### Install Hashcat on Linux
+
+* Download the Linux archive from the official site
+* Extract using:
+  `tar -xvf hashcat-x.x.x.7z` *(replace with actual file name)*
+* Ensure GPU drivers (CUDA or OpenCL) are installed
+* Navigate to the extracted folder
+* Run `./hashcat` to launch the tool
+
+
+
+
+presented with the help of:
+Daniel. (2025, June 22). Hashcat: Description, operation, and usage. DataScientest. https://datascientest.com/en/all-about-hashcat 
