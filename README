@@ -16,17 +16,17 @@ However, if an attacker obtains these fingerprints, they may try to retrieve the
 **GPU Requirements:**
 
 * Hashcat uses GPU for faster performance
-* **NVIDIA GPUs**: Install **CUDA drivers**
-* **AMD GPUs**: Install **OpenCL drivers**
+* NVIDIA GPUs: Install CUDA drivers
+* AMD GPUs**: Install OpenCL drivers
 
 ---
 
-### 💻 Install Hashcat on Windows
+### Install Hashcat on Windows
 
 * Go to the [official Hashcat website](https://hashcat.net/hashcat/)
-* Download the latest **Windows** version
-* Extract the archive using **WinRAR** or **7-Zip**
-* Open **Command Prompt**
+* Download the latest Windows version
+* Extract the archive using WinRAR or 7-Zip
+* Open Command Prompt
 * Navigate to the extracted folder using `cd`
 * Run `hashcat.exe` to verify installation
 
@@ -34,14 +34,14 @@ However, if an attacker obtains these fingerprints, they may try to retrieve the
 
 ### Install Hashcat on macOS
 
-* Download the **macOS** version from the official site
+* Download the macOS version from the official site
 * Use **Terminal** to:
 
   * Extract the files
   * Navigate into the installation folder
 * If you get a permission error:
 
-  * Go to **System Preferences > Security & Privacy**
+  * Go to System Preferences > Security & Privacy
   * Allow execution
 * Run `./hashcat` from Terminal to start the program
 
@@ -51,11 +51,17 @@ However, if an attacker obtains these fingerprints, they may try to retrieve the
 
 * Download the Linux archive from the official site
 * Extract using:
-  `tar -xvf hashcat-x.x.x.7z` *(replace with actual file name)*
+  `tar -xvf hashcat-x.x.x.7z` (replace with actual file name)
 * Ensure GPU drivers (CUDA or OpenCL) are installed
 * Navigate to the extracted folder
 * Run `./hashcat` to launch the tool
 
+** How to use 
+* hashcat -h	Displays the built-in help and full list of available options.
+* hashcat -a 0 -m 0 hash.txt rockyou.txt	Performs a dictionary attack (mode 0) on MD5 hashes (type 0) using the rockyou.txt wordlist.
+* hashcat -a 3 -m 0 hash.txt ?a?a?a?a?a?a	Executes a brute-force attack (mode 3) on MD5 hashes, testing all possible 6-character combinations.
+* hashcat -a 6 -m 0 hash.txt rockyou.txt ?d?d?d	Performs a hybrid attack (mode 6) combining each dictionary word with three digits appended, simulating passwords like "admin123".
+* The -a defines the attack mode (0 for dictionary, 3 for brute force, 6 for hybrid), the -m specifies the hash type (MD5, SHA1, bcrypt…), and the rest configure the files to use.
 
 
 
